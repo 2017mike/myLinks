@@ -71,6 +71,24 @@ a {
   background-color: rgb(49, 49, 49);
 }
 
+.btn-delete:hover {
+  background-color: rgb(49, 49, 49);
+}
+
+.btn-delete {
+  
+  padding: .5em;
+  color: white;
+  background-color: rgb(62, 62, 62);
+  border: none;
+  cursor: pointer;
+  border-radius: .1rem;
+  -webkit-border-radius: .1rem;
+  -moz-border-radius: .1rem;
+  -ms-border-radius: .1rem;
+  -o-border-radius: .1rem;
+}
+
 .spacer {
   height: 5vh;
 

@@ -7,7 +7,6 @@ body {
 a {
   text-decoration: none;
   color: white;
-
 }
 
 .title {
@@ -82,5 +81,19 @@ a {
   border: none;
   outline: none;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width:450px) {
+  .card {
+    font-size: 1rem;
+  }
+
+  .basic-grid {
+    margin-left: 10vw;
+    margin-right: 10vh;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
 
 }

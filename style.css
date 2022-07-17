@@ -18,18 +18,17 @@ a {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
-
 }
 
 
 .card {
-  
   color: white;
   background-color: rgb(62, 62, 62);
-  display: flex;
-  justify-content: center;
   padding: .25rem .5rem;
   font-size: 1.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .btn {

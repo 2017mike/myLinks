@@ -14,8 +14,15 @@
 <body>
 
   <div class="inputAndBtn">
-    <input class="input" id="addLinkInput" type="text">
+    <h2>Title</h2>
+    <input class="input" id="titleInput" type="text">
+    <h2>Link</h2>
+    <input class="input 2ndInput" id="linkInput" type="text">
     <button class="btn" id="addLinkBtn">Add Link</button>
+  </div>
+
+  <div class="title">
+  <h1>My Links</h1>
   </div>
 
   <div class="spacer"></div>
@@ -38,27 +45,31 @@
     myLinks.forEach(link=> {
       document.getElementById("bigGrid").innerHTML += `
        <div class="card">
-        <a target="_blank" href="${link.link}">${link.link}</a>
+        <a target="_blank" href="${link.link}">${link.title}</a>
         </div>
       `
     })
 
     document.getElementById('addLinkBtn').addEventListener('click', event => {
-      const newLink = document.getElementById('addLinkInput').value
+      const newTitle = document.getElementById('titleInput').value
+      const newLink = document.getElementById('linkInput').value
       const newLinkObj = {
+        title: newTitle,
         link: newLink
       }
 
       console.log(myLinks)
       myLinks.push(newLinkObj)
-            console.log(myLinks)
+      console.log(myLinks)
 
       localStorage.setItem('myLinks', JSON.stringify(myLinks))
+
+      bigGrid.innerHTML = ''
 
       myLinks.forEach(link => {
         document.getElementById("bigGrid").innerHTML += `
        <div class="card">
-        <a target="_blank" href="${link.link}">${link.link}</a>
+        <a target="_blank" href="${link.link}">${link.title}</a>
         </div>
       `
       })

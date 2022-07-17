@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.inputAndBtn {
+  margin-left: 5vh;
+  margin-top: 5vh;
+}
+
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
+
+}
+
+
+.card {
+  color: white;
+  background-color: rgb(62, 62, 62);
+  display: flex;
+  justify-content: center;
+  padding: .25rem 0rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 1em;
+  color: white;
+  background-color: rgb(62, 62, 62);
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: rgb(49, 49, 49);
+}
+
+.spacer {
+  height: 10vh;
+
+}
+
+.input {
+  padding: .5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+
+
+<body>
+
+  <div class="inputAndBtn">
+    <input class="input" id="addLinkInput" type="text">
+    <button class="btn" id="addLinkBtn">Add Link</button>
+  </div>
+
+  <div class="spacer"></div>
+  <div id="bigGrid" class="basic-grid cards">
+  </div>
+
+
+  <script>
+    let myLinks = localStorage.getItem('myLinks') || []
+    console.log(myLinks)
+
+    if(myLinks.length>=1) {
+      myLinks = JSON.parse(myLinks)
+    }
+    
+  
+
+
+    console.log(myLinks)
+    myLinks.forEach(link=> {
+      document.getElementById("bigGrid").innerHTML += `
+       <div class="card">
+        <a style="text-decoration: none"href="${link.link}">${link.link}</a>
+        </div>
+      `
+    })
+
+    document.getElementById('addLinkBtn').addEventListener('click', event => {
+      const newLink = document.getElementById('addLinkInput').value
+      const newLinkObj = {
+        link: newLink
+      }
+
+      console.log(myLinks)
+      myLinks.push(newLinkObj)
+            console.log(myLinks)
+
+      localStorage.setItem('myLinks', JSON.stringify(myLinks))
+
+      myLinks.forEach(link => {
+        document.getElementById("bigGrid").innerHTML += `
+       <div class="card">
+        <a style="text-decoration: none;"href="${link.link}">${link.link}</a>
+        </div>
+      `
+      })
+    })
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

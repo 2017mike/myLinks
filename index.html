@@ -40,6 +40,8 @@
   <div id="bigGrid" class="basic-grid cards">
   </div>
 
+  <div class="spacer"></div>
+
 
   <script>
     let myLinks = localStorage.getItem('myLinks') || []
@@ -57,7 +59,7 @@
 
 
     document.addEventListener('keydown', event => {
-      console.log(event)
+      // console.log(event)
       if(event.code === 'Enter') {
       const newTitle = document.getElementById('titleInput').value
       const newLink = document.getElementById('linkInput').value
@@ -124,7 +126,7 @@
 
     document.addEventListener("click", event => {
       if(event.target.classList.contains('btn-delete')) {
-       console.log(myLinks)
+      //  console.log(myLinks)
        let deletedIndex = parseInt(event.target.dataset.i)
         myLinks.splice(deletedIndex, 1)
 
